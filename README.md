@@ -30,6 +30,11 @@ Install dev dependencies:
 npm i -d && npm test
 ```
 
+## Related
+
+- [braces](https://github.com/jonschlinkert/braces): Bash-like brace expansion for node.js
+- [tildify](https://github.com/sindresorhus/tildify): converts file paths to tildes
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/expand-tilde/issues)
 
