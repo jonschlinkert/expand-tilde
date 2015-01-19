@@ -1,6 +1,6 @@
 # expand-tilde [![NPM version](https://badge.fury.io/js/expand-tilde.svg)](http://badge.fury.io/js/expand-tilde)
 
-> Bash-like tilde expansion for node.js. Expands leadings tildes in filepaths to the user home directory.
+> Bash-like tilde expansion for node.js. Expands a leading tilde in a file path to the user home directory, or `~+` to the cwd.
 
 ## Install with [npm](npmjs.org)
 
