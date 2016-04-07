@@ -23,7 +23,9 @@
     "os-homedir": "^1.0.1"
   },
   "devDependencies": {
-    "mocha": "*"
+    "gulp-format-md": "^0.1.7",
+    "is-windows": "^0.1.1",
+    "mocha": "^2.4.5"
   },
   "keywords": [
     "cwd",
@@ -36,5 +38,30 @@
     "tilde",
     "user",
     "userhome"
-  ]
+  ],
+  "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "micromatch",
+        "braces",
+        "expand-brackets",
+        "is-glob"
+      ]
+    },
+    "reflinks": [
+      "verb"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
 }
