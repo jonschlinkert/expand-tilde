@@ -7,14 +7,21 @@
 
 'use strict';
 
+require('mocha');
+var isWindows = require('is-windows');
+var assert = require('assert');
 var path = require('path');
 path.sep = '/';
 
-var assert = require('assert');
 var expandTilde = require('./');
 
-it('should equal', function () {
-  assert.equal(expandTilde('~'), '/Users/jonschlinkert');
-  assert.equal(expandTilde('~+'), process.cwd());
-  assert.equal(expandTilde('~+/foo/bar'), path.join(process.cwd(), 'foo/bar'));
-});
+if (isWindows() !== true) {
+  it('should expand a tilde to the user home directory', function() {
+    assert.equal(expandTilde('~'), '/Users/jonschlinkert');
+  });
+
+  it('should expand `~+` to process.cwd, per bash spec', function() {
+    assert.equal(expandTilde('~+'), process.cwd());
+    assert.equal(expandTilde('~+/foo/bar'), path.join(process.cwd(), 'foo/bar'));
+  });
+}
