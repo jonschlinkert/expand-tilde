@@ -6,14 +6,17 @@
  */
 
 var path = require('path');
-var userhome = require('user-home');
+var homedir = require('os-homedir');
 
-module.exports = function expandTilde(fp) {
-  if (fp.charCodeAt(0) === 126 /* ~ */) {
-    if (fp.charCodeAt(1) === 43 /* + */) {
-      return path.join(process.cwd(), fp.slice(2));
+module.exports = function expandTilde(filepath) {
+  var home = homedir();
+
+  if (filepath.charCodeAt(0) === 126 /* ~ */) {
+    if (filepath.charCodeAt(1) === 43 /* + */) {
+      return path.join(process.cwd(), filepath.slice(2));
     }
-    return userhome ? path.join(userhome, fp.slice(1)) : fp;
+    return home ? path.join(home, filepath.slice(1)) : filepath;
   }
-  return fp;
+
+  return filepath;
 };
