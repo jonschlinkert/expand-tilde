@@ -3,30 +3,24 @@
   "description": "Bash-like tilde expansion for node.js. Expands a leading tilde in a file path to the user home directory, or `~+` to the cwd.",
   "version": "1.2.0",
   "homepage": "https://github.com/jonschlinkert/expand-tilde",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/expand-tilde.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/expand-tilde",
   "bugs": {
     "url": "https://github.com/jonschlinkert/expand-tilde/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/expand-tilde/blob/master/LICENSE"
-  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha"
   },
   "dependencies": {
-    "user-home": "^1.1.1"
+    "os-homedir": "^1.0.1"
   },
   "devDependencies": {
     "mocha": "*"
