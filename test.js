@@ -9,7 +9,7 @@ path.sep = '/';
 
 var expandTilde = require('./');
 
-if (isWindows() !== true) {
+if (!isWindows()) {
   it('should expand a tilde to the user home directory', function() {
     assert.equal(expandTilde('~'), home());
   });
