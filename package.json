@@ -10,7 +10,9 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "LICENSE",
+    "README.md"
   ],
   "main": "index.js",
   "engines": {
@@ -18,9 +20,6 @@
   },
   "scripts": {
     "test": "mocha"
-  },
-  "dependencies": {
-    "os-homedir": "^1.0.1"
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.9",
@@ -51,10 +50,10 @@
     ],
     "related": {
       "list": [
-        "micromatch",
         "braces",
         "expand-brackets",
-        "is-glob"
+        "is-glob",
+        "micromatch"
       ]
     },
     "reflinks": [

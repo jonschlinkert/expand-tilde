@@ -5,11 +5,11 @@
  * Licensed under the MIT license.
  */
 
+var os = require('os');
 var path = require('path');
-var homedir = require('os-homedir');
 
 module.exports = function expandTilde(filepath) {
-  var home = homedir();
+  var home = os.homedir();
 
   if (filepath.charCodeAt(0) === 126 /* ~ */) {
     if (filepath.charCodeAt(1) === 43 /* + */) {
