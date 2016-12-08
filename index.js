@@ -5,11 +5,11 @@
  * Licensed under the MIT license.
  */
 
-var os = require('os');
+var homedir = require('homedir-polyfill');
 var path = require('path');
 
 module.exports = function expandTilde(filepath) {
-  var home = os.homedir();
+  var home = homedir();
 
   if (filepath.charCodeAt(0) === 126 /* ~ */) {
     if (filepath.charCodeAt(1) === 43 /* + */) {
